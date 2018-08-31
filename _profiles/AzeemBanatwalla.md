@@ -7,6 +7,7 @@ facebook : facebook.com/TheBanat
 quotes: Effortlessly likeable
 quotes-author : The Hindu
 picture: /assets/img/azeem12.jpg
+temp-picture: /assets/img/temp_img/azeem12_temp.jpg
 avatar: /assets/img/avatar/Azeem.jpg
 <!-- url: /profiles/AzeemBanatwalla/ -->
 ---

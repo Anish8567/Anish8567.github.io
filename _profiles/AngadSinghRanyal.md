@@ -7,6 +7,7 @@ facebook : facebook.com/angad.ranyal
 quotes: Seriously Funny
 quotes-author : Delhi Times
 picture: /assets/img/Angad 2edit.jpg
+temp-picture: /assets/img/temp_img/Angad 2edit_temp.jpg
 avatar: /assets/img/avatar/Angad.jpg
 <!-- url: /profiles/AngadSinghRanyal/ -->
 ---

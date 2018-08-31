@@ -7,6 +7,7 @@ facebook : facebook.com/KunalRaoComedy
 quotes: Effortlessly funny
 quotes-author : Mumbai Mirror
 picture: /assets/img/Kunal 4.jpg
+temp-picture: /assets/img/temp_img/Kunal 4_temp.jpg
 avatar: /assets/img/avatar/Kunal.jpg
 <!-- url: /profiles/KunalRao/ -->
 ---

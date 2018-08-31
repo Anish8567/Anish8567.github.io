@@ -23,8 +23,8 @@
       </div>
     </div>
     <div class="row text-right" >
-    	<div class="col-sm-12 profile-image-container" >
-    		<img class="profile-image" src="{{page.picture}}">
+    	<div class="col-sm-12 profile-image-container tempimg" data-image-full="{{page.picture}}">
+    		<img class="profile-image" src="{{page.temp-picture}}">
     	</div>
     </div>
     <div class="row">
@@ -39,8 +39,8 @@
 	    		</div>
     		</div>
     	</div>
-    	<div class="col-sm-6 text-center mb-5 pb-5">
-    		<button class="btn btn-primary book-now"> Book {{page.firstname}} for a Gig</button>
+    	<div class="col-sm-6 text-center mb-5 pb-5 book-now-outer">
+    		<a href="#contact-us"><button class="btn btn-primary book-now" >  Book {{page.firstname}} for a Gig </button> </a>
     		<div class="social-info-container social-link-container"><a target="_blank" href="https://twitter.com/{{page.twitter}}">@{{page.twitter}} on Twitter</a> </div>
     		<div class="social-link-container"><a target="_blank" href="https://www.{{page.facebook}}">{{page.facebook}}</a></div>
     	</div>

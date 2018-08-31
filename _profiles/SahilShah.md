@@ -7,6 +7,7 @@ facebook :
 quotes: A perennial rib tickle
 quotes-author : Indian Express
 picture: /assets/img/Sahil 2.jpg
+temp-picture: /assets/img/temp_img/Sahil 2_temp.jpg
 avatar: /assets/img/avatar/Sahil.jpg
 <!-- url: /profiles/SahilShah/ -->
 ---

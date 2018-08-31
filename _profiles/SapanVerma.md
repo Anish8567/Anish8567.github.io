@@ -7,6 +7,7 @@ facebook : facebook.com/TheSapanVerma
 quotes: The hot favourite of the audience
 quotes-author : The Indian Express
 picture: /assets/img/Sapan 23.jpg
+temp-picture: /assets/img/temp_img/Sapan 23_temp.jpg
 avatar: /assets/img/avatar/Sapan.jpg
 <!-- url: /profiles/SapanVerma/ -->
 ---

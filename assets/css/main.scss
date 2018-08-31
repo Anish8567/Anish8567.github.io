@@ -598,9 +598,15 @@ p {
 		padding-top: 40px;
 	}
 	.book-now{
-		position: relative;
+		position: static;
+		margin-top: 15px;
+		margin-bottom: 15px;
 		right: 0;
 		text-align: center;
+	}
+	.book-now-outer{
+		margin: 0 !important;
+		padding-bottom:40 !important;
 	}
 	.social-info-container{
 		margin-top: 0px;
@@ -788,6 +794,15 @@ p {
 	.m-absolute{
 		position: absolute;
 	}
+	.profile-links2{
+		display: block;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		max-width: 200px;
+		margin: auto;
+	}
 }
 
 .block {
@@ -966,7 +981,6 @@ p {
 	background-color:  $home-page-nav-bg ;
 }
 
-
 @media only screen and (max-width: 768px) and (min-width: 600px) {
 	.eic-team{
 		width: 30%;
@@ -977,3 +991,11 @@ p {
 		width: 30%;
 	}
 }*/
+.tempimg{
+	filter: blur(3px); 
+}
+
+.tempimg.is-loaded {
+  filter: none;
+  /*transition: filter 300ms;*/
+}
