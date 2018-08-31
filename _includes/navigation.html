@@ -1,0 +1,73 @@
+<div class="container-fluid nav-inner-container">
+	<ul class="row mb-1">
+		<li class="nav-block">
+			<div class="nav-items-outer"><a href="/" title="Home" class="nav-items color-inherit text-uppercase"> Home</a></div>
+		</li>
+		<li class="nav-block">
+			<div class="team-dropdown">
+			  <div class="nav-items-outer"><a title="comedy" class="nav-items  team-dropbtn color-inherit text-uppercase"> Comedy <i class="fas fa-caret-down"></i></a></div>
+			  <div class="team-dropdown-content comedy-content dropdown-left-comedy">
+  				<a href="/live-comedy" class='d-block text-left comedy-type border-r'>
+  					<h3 class="comedy-type-title pt-4 pb-2"> LIVE</h3>
+		  			<div class="comedy-nav-links">
+	  					<div class="pb-2">
+	  						Live Stand Up
+	  					</div>
+	  					<div class="pb-2">
+	  						College Shows
+	  					</div>
+	  					<div class="pb-2">
+	  						 Corporate Events
+	  					</div>
+	  				</div>
+  				</a>
+  				<a href="/digital-comedy" class='d-block text-right comedy-type'>
+						<h3 class="comedy-type-title pt-4 pb-2"> DIGITAL</h3>
+		  			<div class="comedy-nav-links">
+	  					<div class="pb-2">
+	  						Comedy Videos
+	  					</div>
+	  					<div class="pb-2">
+  							Branded Content
+	  					</div>
+		  			</div>
+  				</a>
+			  </div>
+			</div>
+		</li>
+		<li class="nav-block">
+			<div class="team-dropdown">
+			  <div class="nav-items-outer" ><a title="team" class="nav-items team-dropbtn color-inherit text-uppercase">Team <i class="fas fa-caret-down"></i></a></div>
+			  <ul class="team-dropdown-content dropdown-left-team">
+					{% for profile in site.profiles %}
+						<li>
+					    <a href="{{profile.url}}">
+					    	<div class="container">
+					    		<div class="row">
+					    			<div class="col-sm-3 col-3">
+					    				<img src="{{profile.avatar}}" alt="Avatar" class="avatar">
+					    			</div>
+					    			<div class="col-sm-9 col-9 profile-nav-link">
+					    				<h5 class="margin-0 mt-1 mb-1">{{profile.title}}</h5>
+					    				<p class="mb-0 text-sm">{{profile.quotes}}</p>
+											<span class="text-xs">— {{profile.quotes-author}}</span>
+					    			</div>
+					    		</div>
+					    	</div>
+					    </a>
+						</li>
+			    {% endfor %}
+			  </ul>
+			</div>
+		</li>
+		<li class="nav-block">
+			<div class="nav-items-outer" ><a href="/tickets/" title="Tickets" class="nav-items color-inherit text-uppercase"> Tickets</a></div>
+		</li>
+		<li class="nav-block">
+			<div class="nav-items-outer"><a href="#" title="Merchandise" class="nav-items color-inherit text-uppercase"> Merchandise</a></div>
+		</li>
+		<li class="nav-block">
+			<div class="nav-items-outer"><a href="#contact-us" title="Contact Us" class="color-inherit nav-items text-uppercase"> Contact Us</a></div>
+		</li>
+	</ul>
+</div>

@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<!-- <div id="load"></div> -->
+<div class="container" id="tickets-outer-container">
+	<h1 class="mt-5 mb-5 sub-title">Upcoming Events</h1>
+	<div class="tickets-container mt-4 mb-4 ">
+
+	</div>
+</div>
+
+
+<script id="tickets_template" type="text/template">
+	<!-- ugly escaping of liquid tags due to the way things are https://github.com/Shopify/liquid/issues/6 -->
+	<div class="row pt-4 pb-4 inner-ticket-container">
+	  <div class="col-sm-2">
+	    <div class="date-container">
+	      <img class="icon-size" src="/assets/img/svg/Tilda_Icons_1ed_calendar.svg">
+	      {{ '{{date' }}}}
+	    </div>
+	  </div>
+	  <div class="col-sm-6">
+	    <div class="event-title">
+	      {{ '{{title' }}}}
+	    </div>
+	    <div class="event-artist">
+	      <img class="icon-size" src="/assets/img/svg/Tilda_Icons_32_profession_lead.svg"> {{ '{{artist' }}}}
+	    </div>
+	  <img class="icon-size" src="/assets/img/svg/Tilda_Icons_11mu_clock.svg">
+	    <span class="time-container">{{ '{{time' }}}}</span>
+	    <img class="icon-size" src="/assets/img/svg/Tilda_Icons_1ed_location.svg">&nbsp<span class="venue">{{ '{{venue' }}}}</span>
+	    <div class="event-description">{{'{{description'}}}}</div>
+	  </div>
+	  <div class="col-sm-2">
+	    <div class="buy-tickets">
+	      <a class="btn btn-warning" target="_blank" href="{{'{{booking'}}}}">Buy Tickets</a>
+	    </div>
+	  </div>
+	</div>
+</script>
