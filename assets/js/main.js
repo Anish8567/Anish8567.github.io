@@ -128,7 +128,7 @@ function skrollrInit() {
 	if($(window).width() > 600)
 	{
 
-		 skrollr.init();
+		 skrollr.init({forceHeight: false});
 		 t= 1;
 	    // disable skrollr if using handheld device
 	    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
