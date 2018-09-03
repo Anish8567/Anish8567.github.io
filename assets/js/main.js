@@ -1,6 +1,7 @@
 $(document).ready(function(){
 	resizeDiv();
 	skrollrInit();
+	 AOS.init();
 });
 
 window.onresize = function(event) {
@@ -185,5 +186,5 @@ function lazyLoad() {
 
 function addDescription(data){
 	console.log(data);
-	document.getElementById("description").value = "Book " +data+" for a gig";
+	document.getElementById("description").value = "Enquiry for " +data;
 }
