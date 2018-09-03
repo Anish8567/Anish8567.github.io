@@ -1,6 +1,7 @@
 ---
 layout: profile 
-title: Sapan Verma
+title: EIC | Sapan Verma
+artist: Sapan Verma
 firstname: Sapan
 twitter: SapanVerma
 facebook : facebook.com/TheSapanVerma

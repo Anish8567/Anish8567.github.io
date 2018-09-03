@@ -1,6 +1,7 @@
 ---
 layout: profile 
-title: Angad Singh Ranyal
+title: EIC | Angad Singh Ranyal
+artist: Angad Singh Ranyal
 firstname: Angad
 twitter: PiratedSardar
 facebook : facebook.com/angad.ranyal

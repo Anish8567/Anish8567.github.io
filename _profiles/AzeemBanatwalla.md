@@ -1,6 +1,7 @@
 ---
 layout: profile 
-title: Azeem Banatwalla 
+title: EIC | Azeem Banatwalla 
+artist: Azeem Banatwalla 
 firstname: Azeem
 twitter: TheBanat
 facebook : facebook.com/TheBanat

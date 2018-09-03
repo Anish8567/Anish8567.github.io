@@ -1,6 +1,7 @@
 ---
 layout: profile 
-title: Kunal Rao
+title: EIC | Kunal Rao
+artist: Kunal Rao
 firstname: Kunal
 twitter: kunalrao
 facebook : facebook.com/KunalRaoComedy

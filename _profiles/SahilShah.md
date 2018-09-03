@@ -1,6 +1,7 @@
 ---
 layout: profile 
-title: Sahil Shah
+title: EIC | Sahil Shah
+artist: Sahil Shah
 firstname: Sahil
 twitter: sahilbulla
 facebook : 

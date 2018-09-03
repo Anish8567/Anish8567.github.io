@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "A list of Profiles"
+title: "EIC | Profiles"
 permalink: "/profiles/"
 ---
 <!-- 

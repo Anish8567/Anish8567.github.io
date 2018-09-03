@@ -185,6 +185,6 @@ function lazyLoad() {
 }
 
 function addDescription(data){
-	console.log(data);
+	// console.log(data);
 	document.getElementById("description").value = "Enquiry for " +data;
 }
