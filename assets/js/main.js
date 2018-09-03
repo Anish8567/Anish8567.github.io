@@ -43,16 +43,52 @@ function csvJSON(csv){
 	  result.push(obj);
   }
   var data = JSON.stringify(result); //JSON
-  test(result);
+  // test(result);
+
+  	console.log(result);
+  	var tempdata=result;
+	var testing= tempdata.sort(sorted("date"));
+	console.log(testing);
+	eventsAfterToday(testing);
 }
 
-function test(data){
-	for (var i = data.length - 1; i >= 0; i--) {
-		var template = $('#tickets_template').html();
-		if (template) {
-			var html = Mustache.to_html(template, data[i]);
-			$('.tickets-container').append(html);
+function sorted(data){
+	   return function(a, b) {  
+        var dateA = new Date(a.date), dateB = new Date(b.date);
+    	return dateA - dateB;
+    }  
+}
+function eventsAfterToday(data1){
+	var fullData = data1;
+	var todayDate= new Date();
+	var newData=[];
+
+	for(var i=0 ; i < fullData.length ;i++){
+
+		if(new Date (fullData[i].date) > todayDate){
+			fullData[i].date = moment(new Date (fullData[i].date)).format("MMM Do YYYY"); 
+			newData.push(fullData[i]);
 		}
+		else{
+			console.log("no");
+		}
+	}
+	test(newData);
+}
+
+
+function test(data){
+	if(data.length > 0){
+		for (var i =0 ; i < data.length; i++) {
+			var template = $('#tickets_template').html();
+			if (template) {
+				var html = Mustache.to_html(template, data[i]);
+				$('.tickets-container').append(html);
+			}
+		}
+	}
+	else{
+		$('#tickets-outer-container h1').text("No Upcoming Events");
 	}
 }
 
