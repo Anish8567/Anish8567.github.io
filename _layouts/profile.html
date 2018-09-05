@@ -2,22 +2,26 @@
 <html lang="en">
   {% include head.html %}
   <body>
-    <div class="container-fluid pt-2 pb-2 nav-outer-container">
-        <div class="container">
-            <div class="row pt-2 pb-2" >
-                <div class="col-sm-2 logo-container">
-                    <img src="/assets/img/eic_logo_1.png" width="110" height="110">
-                </div>
-                <div class="col-sm-10">
-                    {% include social_links.html %}
-                    {% include navigation.html %}
-                </div>
+    <div class="container-fluid fixed-top navbar-main-index pt-3 pb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2">
+            <img src="/assets/img/eic_logo_1.png" class="logo_img" >
+          </div>
+          <div class="col-sm-8 ">
+            {% include navigation.html %}
+          </div>
+          <div class="col-sm-2 text-right">
+            <div class="social-links-container">
+              {% include social_links.html %}
             </div>
+          </div>
         </div>
+      </div>
     </div>
-  <div class="container mt-5">
+  <div class="container">
     <div class="row">
-      <div class="col-sm-12">
+      <div class="col-sm-12 margin-top-150">
         <h5>Profile</h5>
 		<h1 data-profile-name="{{page.artist}}" id="profile-details" class="profile-details">{{page.artist}}</h1>
       </div>

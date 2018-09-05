@@ -1,7 +1,9 @@
 $(document).ready(function(){
 	resizeDiv();
 	skrollrInit();
-	 AOS.init();
+	 AOS.init({
+	 	disable: window.innerWidth > 600,
+	 });
 });
 
 window.onresize = function(event) {
@@ -12,17 +14,26 @@ window.onresize = function(event) {
 function resizeDiv() {
 	vpw = $(window).width();
 	vph = $(window).height();
-	navbar = $('.nav-outer-container').height();
-	videoheight= vph - navbar;
+	navbar = $('.nav-outer').innerHeight();
+	if ($('.navbar-main-index').css('position') == 'static')
+	{
+	  	videoheight= vph - navbar;
+	  	$('.video-container').css({'margin-top' : 0 + 'px'});
+	}
+	else
+	{
+		$('.video-container').css({'margin-top' : navbar + 'px'});
+		videoheight= vph  - navbar;
+	}
 	$('#myVideo').css({'height': videoheight + 'px'});
-	$('#tickets-outer-container').css({'min-height': videoheight + 'px'});
 }
 
 $(document).ready(function(){
-	$( ".video-cover-img"  ).last().addClass( "right-border-radius" );
-	$( ".video-cover-img"  ).first().addClass( "left-border-radius" );
+	// $( ".video-cover-img"  ).last().addClass( "right-border-radius" );
+	// $( ".video-cover-img"  ).first().addClass( "left-border-radius" );
 });
 
+// read data from google sheet
 $(document).ready(function(){
 	$.ajax("https://docs.google.com/spreadsheets/d/e/2PACX-1vQy7PRXMh6GB88jf-4uDGdSfyx8qwEmQJQ6IxvSc9tQHyBGd3VpVNi8OW6GuHizI8TdVj-otfdeHCPw/pub?gid=0&single=true&output=csv").done(function(result){
 	    csvJSON(result);
@@ -45,10 +56,10 @@ function csvJSON(csv){
   var data = JSON.stringify(result); //JSON
   // test(result);
 
-  	console.log(result);
+  	// console.log(result);
   	var tempdata=result;
 	var testing= tempdata.sort(sorted("date"));
-	console.log(testing);
+	// console.log(testing);
 	eventsAfterToday(testing);
 }
 
@@ -61,16 +72,17 @@ function sorted(data){
 function eventsAfterToday(data1){
 	var fullData = data1;
 	var todayDate= new Date();
+	// console.log(todayDate);
 	var newData=[];
 
 	for(var i=0 ; i < fullData.length ;i++){
 
-		if(new Date (fullData[i].date) > todayDate){
+		if(new Date (fullData[i].date +" "+ fullData[i].time) >= todayDate){
 			fullData[i].date = moment(new Date (fullData[i].date)).format("MMM Do YYYY"); 
 			newData.push(fullData[i]);
 		}
 		else{
-			console.log("no");
+			// console.log("no");
 		}
 	}
 	test(newData);
@@ -88,6 +100,7 @@ function test(data){
 		}
 	}
 	else{
+		$('#tickets-outer-container h1').css({'text-align' : 'center'});
 		$('#tickets-outer-container h1').text("No Upcoming Events");
 	}
 }
@@ -112,6 +125,7 @@ $("a[href^='#']").click(function(e) {
 	},1000 );
 });
 
+//email function
 $(document).ready(function() {
 	var formUrl= "http://128.199.218.232:89/eic-contact/";
       $('form').submit(function(evt){
@@ -175,7 +189,7 @@ function skrollrInit() {
 	else {
 
 		if( t == 1){
- 				
+ 				// disable skrollr if using handheld device
 			if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
 
 		        skrollr.init().destroy();
@@ -189,6 +203,7 @@ function skrollrInit() {
 	}
 
 }
+
 //blur effects
 
 window.addEventListener('load', function() {
@@ -205,7 +220,7 @@ function lazyLoad() {
 	card_images.forEach(function(card_image) {
 
 		if($(card_images).attr('data-image-full')) {
-			console.log("yes ");
+			// console.log("yes ");
 			var image_url = card_image.getAttribute('data-image-full');
 			var content_image = card_image.querySelector('img');
 			content_image.src = image_url;
@@ -219,8 +234,17 @@ function lazyLoad() {
 	});
 	
 }
-
+//cta function to fill data in email
 function addDescription(data){
 	// console.log(data);
 	document.getElementById("description").value = "Enquiry for " +data;
+}
+
+// to find scroll top position
+var $window = $(window);
+$window.on('scroll resize', check_scroll_top);
+
+function check_scroll_top(){
+	var checkScrollTop = $(window).scrollTop();
+	// console.log("checkScrollTop:" +checkScrollTop);
 }

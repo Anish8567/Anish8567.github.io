@@ -41,14 +41,7 @@ p {
 .nav-container{
 	background-color: #f9f9f8;
 }
-.nav-outer-container{
-	background-color: #f9f9f8;
 
-	.nav-inner-container{
-		position: absolute;
-		bottom: 0;
-	}
-}
 .logo-container{
 	text-align: left;
 }
@@ -279,8 +272,11 @@ p {
 }
 .social-links-container {
 	z-index: 50000;
-	position: relative;
-	top: 20px;
+	position: absolute;
+	top: 5px;
+}
+
+.social-links-container1 {
 	animation-name: animations_top;
 	opacity: 0;
 	animation-fill-mode:forwards;
@@ -428,7 +424,10 @@ p {
 }
 .sub-title{
 	color: #d0021b;
-	font-family: lato;
+	font-family: Oswald;
+}
+.title-color{
+	color: #d0021b;
 }
 .comedy-video-image-cover{
 	width: 100%;
@@ -709,10 +708,7 @@ p {
 		position: static !important;
 			background:$home-page-nav-bg ;
 	}
-	.nav-outer-container{
-		color: black !important;
-		position: static !important;
-	}
+
 	.nav-inner-container ul{
 		padding: 0;
 		text-align: center;
@@ -726,20 +722,10 @@ p {
 		padding-right: 0;
 	}
 	.social-links-container{
-		top: -160px;
-	}
-	.nav-outer-container .social-box{
-		position: absolute;
-    	top: -145px;
+		top: -350px;
+   		right: 0px;
 	}
 
-	.nav-outer-container{
-		background-color: #f9f9f8;
-
-		.nav-inner-container{
-			position: static;
-		}
-	}
 	#masthead h1{
 		margin-bottom: 100px;
 	}
@@ -804,6 +790,12 @@ p {
 		max-width: 200px;
 		margin: auto;
 	}
+	.margin-top-150{
+		margin-top: 20px !important;
+	}
+	#homepage .social-links-container{
+		top: -143px;
+	}
 }
 
 .block {
@@ -838,6 +830,8 @@ p {
 .navbar-main-index {
 	background: $home-page-nav-bg ;
 	color: white;
+}
+.navbar-main-index1 {
 	animation-name: animations_top;
 	opacity: 0;
 	animation-fill-mode:forwards;
@@ -981,11 +975,24 @@ p {
 	color: white;
 	background-color:  $home-page-nav-bg ;
 }
-
+/*ipad*/
 @media only screen and (max-width: 768px) and (min-width: 600px) {
 	.eic-team{
 		width: 30%;
 	}
+	.profile-info-container{
+		position: static;
+	}
+	.book-now-outer div{
+		margin-left: -200px;
+	}
+	.about-quotes{
+		margin-top: 30px;
+	}
+/*	.book-now-outer{
+		margin-top: 200px;
+	}*/
+	
 }
 /*@media only screen and (max-width: 1024px) {
 	.eic-team{
@@ -1002,4 +1009,20 @@ p {
 }
 .footer-title{
 	font-family: Oswald;
+}
+.index-1{
+	z-index: -1;
+}
+.main-home{
+	margin-top: 85px;
+}
+.main-home1{
+	margin-top: 120px;
+}
+.margin-top-150{
+	margin-top: 150px;
+}
+.nav-outer{
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
