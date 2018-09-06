@@ -47,7 +47,7 @@ p {
 }
 .footer-outer-container{
 	border-top: 1px solid #f1f1f1;
-	background-color: #ebebeb33;
+	background-color: #fcfcfc;
 }
 .mail-button{
 	width: 60%;
@@ -796,6 +796,22 @@ p {
 	#homepage .social-links-container{
 		top: -143px;
 	}
+	.fixed-data{
+		position: static !important;
+		top: 0px !important;
+	}
+	.mg-top{
+		margin-top: 0px !important;
+	}
+	.padb-400{
+		padding-bottom: 0px !important;
+	}
+	.bgcolor-white{
+		background-color: transparent !important;
+	}
+	.mobile-border-top{
+		border-top :1px solid #dee2e6 ;
+	}
 }
 
 .block {
@@ -989,11 +1005,52 @@ p {
 	.about-quotes{
 		margin-top: 30px;
 	}
-/*	.book-now-outer{
-		margin-top: 200px;
-	}*/
+
 	
 }
+
+
+@media only screen and (device-width: 768px) {
+  /* For general iPad layouts */
+  	.fixed-data{
+		position: static !important;
+		top: 0px !important;
+	}
+	.mg-top{
+		margin-top: 0px !important;
+	}
+	.padb-400{
+		padding-bottom: 0px !important;
+	}
+	.bgcolor-white{
+		background-color: transparent !important;
+	}
+	.mobile-border-top{
+		border-top :1px solid #dee2e6 ;
+	}
+
+}
+@media only screen and (device-width: 1024px) {
+  /* For general iPad layouts */
+  	.fixed-data{
+		position: static !important;
+		top: 0px !important;
+	}
+	.mg-top{
+		margin-top: 0px !important;
+	}
+	.padb-400{
+		padding-bottom: 0px !important;
+	}
+	.bgcolor-white{
+		background-color: transparent !important;
+	}
+	.mobile-border-top{
+		border-top :1px solid #dee2e6 ;
+	}
+
+}
+
 /*@media only screen and (max-width: 1024px) {
 	.eic-team{
 		width: 30%;
@@ -1025,4 +1082,65 @@ p {
 .nav-outer{
 	padding-top: 15px;
 	padding-bottom: 15px;
+}
+.comedy-videos-items a{
+	text-decoration: none;
+}
+
+/*parallax*/
+/*.p-content{
+	position: fixed;
+	top:10px;
+	left: 45%;
+	background-color: white;
+}
+.p-content-2{
+	background-color: white;
+
+}
+
+.test-1{
+	z-index: 0;
+	left: 50%;
+	position: fixed;
+	top: 0px;
+}
+.left{
+	left: 50%;
+}
+.bg-white{
+	background-color: white;
+}*/
+.section.parallax {
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  /*background-size: cover;*/
+}
+
+.section.parallax-1 {
+  background-image: url("../img/team-eic-Angad.jpg");
+}
+.section.parallax-2 {
+  background-image: url("../img/Kunal 1.jpg");
+}
+.section.parallax-3 {
+  background-image: url("../img/Sapan-3.jpg");
+}
+
+.fixed-data{
+	position: fixed;
+	top: 300px;
+}
+.mg-top{
+	margin-top: 7200px;
+}
+.padb-400{
+	padding-bottom: 400px;
+}
+/*.mg-bottom{
+	margin-top: 300px;
+}*/
+.bgcolor-white{
+	background-color: white;
 }
