@@ -246,5 +246,5 @@ $window.on('scroll resize', check_scroll_top);
 
 function check_scroll_top(){
 	var checkScrollTop = $(window).scrollTop();
-	console.log("checkScrollTop:" +checkScrollTop);
+	// console.log("checkScrollTop:" +checkScrollTop);
 }

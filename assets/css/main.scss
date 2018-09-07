@@ -812,6 +812,9 @@ p {
 	.mobile-border-top{
 		border-top :1px solid #dee2e6 ;
 	}
+	.pad-top-footer{
+		padding-top: 0 !important;
+	}
 }
 
 .block {
@@ -1087,60 +1090,21 @@ p {
 	text-decoration: none;
 }
 
-/*parallax*/
-/*.p-content{
-	position: fixed;
-	top:10px;
-	left: 45%;
-	background-color: white;
-}
-.p-content-2{
-	background-color: white;
-
-}
-
-.test-1{
-	z-index: 0;
-	left: 50%;
-	position: fixed;
-	top: 0px;
-}
-.left{
-	left: 50%;
-}
-.bg-white{
-	background-color: white;
-}*/
-.section.parallax {
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  /*background-size: cover;*/
-}
-
-.section.parallax-1 {
-  background-image: url("../img/team-eic-Angad.jpg");
-}
-.section.parallax-2 {
-  background-image: url("../img/Kunal 1.jpg");
-}
-.section.parallax-3 {
-  background-image: url("../img/Sapan-3.jpg");
-}
 
 .fixed-data{
 	position: fixed;
 	top: 300px;
 }
 .mg-top{
-	margin-top: 7200px;
+	margin-top: 7000px;
 }
 .padb-400{
 	padding-bottom: 400px;
 }
-/*.mg-bottom{
-	margin-top: 300px;
-}*/
+
 .bgcolor-white{
 	background-color: white;
+}
+.pad-top-footer{
+	padding-top: 35px;
 }
