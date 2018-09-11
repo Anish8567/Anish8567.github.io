@@ -3,7 +3,7 @@
 ---
 
 $primary-font: lato, 'Helvetica', sans-serif;
-$home-page-nav-bg : rgba(129,187,64,0.63);
+$home-page-nav-bg : rgba(102,84,93,.95);
 body{
 	font-family: $primary-font;
 }
@@ -187,7 +187,7 @@ p {
 	h1 {
 		font-size:110px;
 		font-family: Oswald;
-		color: #F6A623;
+		color: rgba(102,84,93,1);
 	}
 	span {
 		font-size: 1.6vw;
@@ -371,6 +371,7 @@ p {
 	width: 200px;
 	padding-top:0;
 	height: 450px;
+	background-color: transparentize(grey, 0.95);
 }
 .comedy-type:hover {
 	background-color: transparentize(#D75141, 0.95);
@@ -402,6 +403,7 @@ p {
     bottom: 0;
     width: 100%;
     object-fit: cover;
+
 }
 .video-container {
   	position: relative;
@@ -795,6 +797,10 @@ p {
 	.margin-top-150{
 		margin-top: 20px !important;
 	}
+	.margin-top-100{
+		margin-top: 20px !important;
+	}
+	#ho
 	#homepage .social-links-container{
 		top: -143px;
 	}
@@ -1080,6 +1086,9 @@ p {
 }
 .main-home1{
 	margin-top: 120px;
+}
+.margin-top-100{
+	margin-top: 100px;
 }
 .margin-top-150{
 	margin-top: 150px;

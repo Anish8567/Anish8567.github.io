@@ -92,9 +92,6 @@ function eventsAfterToday(data1){
 		if(temp!='all'){
 			for (var i = 0; i < newData.length; i++) {
 
-				// var sentence = "This is my line";
-				// console.log(sentence.includes("my"));
-
 				if(newData[i].artist.toLowerCase().includes(temp.toLowerCase())){
 					// console.log("yes");
 
@@ -126,11 +123,9 @@ function test(data){
 				$('.tickets-container').append(html);
 			}
 		}
-		// $('#tickets-outer-container h1').css({'text-align' : 'left'});
 		$('#tickets-outer-container h1').text("Upcoming Events");
 	}
 	else{
-		// $('#tickets-outer-container h1').css({'text-align' : 'center'});
 		$('#tickets-outer-container h1').text("No Upcoming Events");
 	}
 }
@@ -279,13 +274,3 @@ function check_scroll_top(){
 	// console.log("checkScrollTop:" +checkScrollTop);
 }
 
-// function filterArtist(data){
-// 	console.log(data);
-// 	console.log("work");
-
-// }
-
-// $( "#selectArtist" ).change(function() {
-// 	var temp= $( "#selectArtist" ).val();
-// 	console.log(temp);
-// });
