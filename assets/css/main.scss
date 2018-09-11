@@ -338,10 +338,9 @@ p {
     display: block;
 }
 
-// .team-dropdown-content a:hover {
-// 	opacity: .5;
-// 	// filter: grayscale(100%);
-// 	}
+.team-dropdown-content a:hover {
+	background-color: transparentize(#D75141, 0.95);
+	}
 
 
 .avatar {
@@ -371,10 +370,10 @@ p {
 	width: 200px;
 	padding-top:0;
 	height: 450px;
-	background-color: transparentize(grey, 0.95);
+	background-color: transparentize(#D75141, 0.95);
 }
 .comedy-type:hover {
-	background-color: transparentize(#D75141, 0.95);
+	background-color: transparentize(white, 0.95);
 	* {
 		color: #CB1500;
 	}
