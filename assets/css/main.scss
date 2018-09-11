@@ -408,6 +408,15 @@ p {
 .video-container {
   	position: relative;
   	overflow: hidden;
+  	
+}
+.live{
+	background: white url('../img/live-comedy-bg.jpg') no-repeat !important;
+	background-color: #ffcfcf;
+}
+.digital{
+	background: white url('../img/digital-comedy-bg.jpg') no-repeat !important;
+	background-color: #ffcfcf;
 }
 .overlay-desc {
 	background: rgba(0,0,0,0);
