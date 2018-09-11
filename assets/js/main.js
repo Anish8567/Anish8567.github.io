@@ -1,9 +1,10 @@
 $(document).ready(function(){
 	resizeDiv();
 	skrollrInit();
-	 AOS.init({
-	 	disable: window.innerWidth > 600,
-	 });
+	 // AOS.init({
+	 // 	disable: window.innerWidth > 600,
+	 // });
+	 AOS.init({});
 });
 
 window.onresize = function(event) {
@@ -54,12 +55,9 @@ function csvJSON(csv){
 	  result.push(obj);
   }
   var data = JSON.stringify(result); //JSON
-  // test(result);
 
-  	// console.log(result);
   	var tempdata=result;
 	var testing= tempdata.sort(sorted("date"));
-	// console.log(testing);
 	eventsAfterToday(testing);
 }
 
@@ -72,8 +70,8 @@ function sorted(data){
 function eventsAfterToday(data1){
 	var fullData = data1;
 	var todayDate= new Date();
-	// console.log(todayDate);
 	var newData=[];
+	var filterData=[];
 
 	for(var i=0 ; i < fullData.length ;i++){
 
@@ -86,21 +84,53 @@ function eventsAfterToday(data1){
 		}
 	}
 	test(newData);
+
+	$( "#selectArtist" ).change(function() {
+		var temp= $( "#selectArtist" ).val();
+		filterData=[];
+
+		if(temp!='all'){
+			for (var i = 0; i < newData.length; i++) {
+
+				// var sentence = "This is my line";
+				// console.log(sentence.includes("my"));
+
+				if(newData[i].artist.toLowerCase().includes(temp.toLowerCase())){
+					// console.log("yes");
+
+					filterData.push(newData[i]);
+
+					}
+
+			}
+				test(filterData);
+		}
+		else
+		{
+			test(newData);
+		}
+		
+	});
+
 }
 
-
 function test(data){
+	
+	$('.tickets-container').html("")
 	if(data.length > 0){
 		for (var i =0 ; i < data.length; i++) {
 			var template = $('#tickets_template').html();
 			if (template) {
 				var html = Mustache.to_html(template, data[i]);
+
 				$('.tickets-container').append(html);
 			}
 		}
+		// $('#tickets-outer-container h1').css({'text-align' : 'left'});
+		$('#tickets-outer-container h1').text("Upcoming Events");
 	}
 	else{
-		$('#tickets-outer-container h1').css({'text-align' : 'center'});
+		// $('#tickets-outer-container h1').css({'text-align' : 'center'});
 		$('#tickets-outer-container h1').text("No Upcoming Events");
 	}
 }
@@ -248,3 +278,14 @@ function check_scroll_top(){
 	var checkScrollTop = $(window).scrollTop();
 	// console.log("checkScrollTop:" +checkScrollTop);
 }
+
+// function filterArtist(data){
+// 	console.log(data);
+// 	console.log("work");
+
+// }
+
+// $( "#selectArtist" ).change(function() {
+// 	var temp= $( "#selectArtist" ).val();
+// 	console.log(temp);
+// });
