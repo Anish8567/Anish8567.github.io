@@ -338,9 +338,10 @@ p {
     display: block;
 }
 
-.team-dropdown-content a:hover {
-	background-color: transparentize(#D75141, 0.95);
-	}
+/* .team-dropdown-content a:hover {
+	opacity: .5;
+ filter: grayscale(100%);
+	}*/
 
 
 .avatar {
