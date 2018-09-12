@@ -20,11 +20,13 @@ function resizeDiv() {
 	{
 	  	videoheight= vph - navbar;
 	  	$('.video-container').css({'margin-top' : 0 + 'px'});
+	  	// $('.video-container').css({'width' : vpw + 'px'});
 	}
 	else
 	{
 		$('.video-container').css({'margin-top' : navbar + 'px'});
 		videoheight= vph  - navbar;
+		// $('.video-container').css({'width' : vpw + 'px'});
 	}
 	$('#myVideo').css({'height': videoheight + 'px'});
 }
