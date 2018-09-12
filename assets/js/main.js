@@ -38,11 +38,39 @@ $(document).ready(function(){
 
 // read data from google sheet
 $(document).ready(function(){
-	$.ajax("https://docs.google.com/spreadsheets/d/e/2PACX-1vQy7PRXMh6GB88jf-4uDGdSfyx8qwEmQJQ6IxvSc9tQHyBGd3VpVNi8OW6GuHizI8TdVj-otfdeHCPw/pub?gid=0&single=true&output=csv").done(function(result){
-	    csvJSON(result);
+	$.ajax("https://docs.google.com/spreadsheets/d/e/2PACX-1vQBWuhzQa7J6YYntssZQV9877Q3XMv4Sr5Y14x1pBzkZrJMuWrKs9bZiXXJGITPKgNZ47S_SjR-zLFy/pub?gid=0&single=true&output=tsv").done(function(result){
+	    tsvJSON(result);
 	});
 });
 
+function tsvJSON(tsv){
+ 
+  var lines=tsv.split("\n");
+ 
+  var result = [];
+ 
+  var headers=lines[0].split("\t");
+ 
+  for(var i=1;i<lines.length;i++){
+ 
+	  var obj = {};
+	  var currentline=lines[i].split("\t");
+ 
+	  for(var j=0;j<headers.length;j++){
+		  obj[headers[j]] = currentline[j];
+	  }
+ 
+	  result.push(obj);
+ 
+  }
+  
+  //return result; //JavaScript object
+  var temp= JSON.stringify(result); 
+  console.log(result);
+  	var tempdata=result;
+	var testing= tempdata.sort(sorted("date"));
+	eventsAfterToday(testing);
+}
 function csvJSON(csv){
   // console.log("inside csv to json function");
   var lines=csv.split("\n");
@@ -57,7 +85,7 @@ function csvJSON(csv){
 	  result.push(obj);
   }
   var data = JSON.stringify(result); //JSON
-
+  	console.log(result);
   	var tempdata=result;
 	var testing= tempdata.sort(sorted("date"));
 	eventsAfterToday(testing);
@@ -275,4 +303,3 @@ function check_scroll_top(){
 	var checkScrollTop = $(window).scrollTop();
 	// console.log("checkScrollTop:" +checkScrollTop);
 }
-

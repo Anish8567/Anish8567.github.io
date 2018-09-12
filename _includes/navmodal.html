@@ -1,0 +1,57 @@
+<!-- modal -->
+<div class="modal fade modal-top " id="navigationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" data-backdrop="false">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <!-- <div class="modal-header no-border">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <h2 aria-hidden="true">&times;</h2>
+        </button>
+      </div> -->
+      <div class="modal-body bg-modal-color">
+      	<div>
+      		<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+         	 	<span aria-hidden="true">&times;</span>
+        	</button>
+    	</div>
+      	<div>
+      		<h4><a href="/" title="Introduction" class="nav-items text-uppercase">Home</a></h4>
+      	</div>
+      	<div>
+      		<h4 data-toggle="collapse" data-target="#comedy">
+      			<a title="comedy" class="nav-items  team-dropbtn text-uppercase">Comedy <h4 class="caret"></h4> </a>
+      		</h4>
+      		<div id="comedy" class="collapse ">
+  				<a href="/live-comedy">
+  					<h5>Live Comedy</h5>
+  				</a>
+  				<a href="/digital-comedy">
+  					<h5>Digital Comedy</h5>
+  				</a>
+			</div>
+      	</div>
+      	<div>
+      		<h4 data-toggle="collapse" data-target="#team">
+      			<a title="team" class="nav-items team-dropbtn text-uppercase">Team <h4 class="caret"></h4> </a>
+      		</h4>
+      		<div id="team" class="collapse">
+				{% for profile in site.profiles %}
+			    <a href="{{profile.url}}" class="">
+			    	<h5> <span> <img src="{{profile.avatar}}" alt="Avatar" class="mobile-avatar"> </span> {{profile.artist}}</h5>
+			    </a>
+			    {% endfor %}
+			</div>
+      	</div>
+      	<div>
+			<h4 ><a href="/tickets/" title="Tickets" class="nav-items text-uppercase">Tickets</a></h4>
+		</div>
+		<div>
+			<h4><a target="_black" href="https://www.thesouledstore.com/artists/east-india-comedy" title="Merchandise"  class="nav-items text-uppercase">Merchandise</a></h4>
+		</div>
+		<div>
+			<h4><a href="#contact-us" title="Contact Us" class="text-black nav-items" data-dismiss="modal" >Contact Us</a></h4>
+		</div>
+
+      </div>
+    </div>
+  </div>
+</div>
