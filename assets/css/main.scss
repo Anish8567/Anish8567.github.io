@@ -1186,5 +1186,8 @@ p {
 
 }
 .bg-modal-color{
-	background-color: #f2f8ff4d;
+	background: white url('../img/bg.jpg') no-repeat;
+	background-size: contain;
+	background-position: right bottom;
+	overflow: auto;
 }
