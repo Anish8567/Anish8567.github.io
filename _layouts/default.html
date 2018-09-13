@@ -6,7 +6,7 @@
 	  <div class="container">
 	    <div class="row">
 	      <div class="col-sm-2">
-	      		<img src="/assets/img/eic_logo_1.png" class="logo_img" > 
+	      		<img src="/assets/img/eic_logo_1.png" class="logo_img" >
 	      </div>
 	      <div class="col-sm-8 mobile-hidden">
 	        {% include navigation.html %}
@@ -23,9 +23,11 @@
 		<img src="/assets/img/svg/menu.svg" class="mobile-menu-img"  data-toggle="modal" data-target="#navigationModal">
 	</div> -->
 	<div class="container mobile-navbar">
-		<i class="fas fa-bars menu-bar-icon" id="mobile-menu-button" data-toggle="modal" data-target="#navigationModal"></i>
+    <button class="menu-bar-icon" id="mobile-menu-button" data-toggle="modal" data-target="#navigationModal">
+      <i class="fas fa-bars"></i>
+    </button>
 	</div>
-	
+
     {{ content }}
     {% include navmodal.html %}
     {% include footer.html %}

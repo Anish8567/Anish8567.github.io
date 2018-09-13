@@ -192,7 +192,7 @@ p {
 	span {
 		font-size: 1.6vw;
 		font-weight: 300;
-		margin-bottom:24px; 
+		margin-bottom:24px;
 	}
 	.lead-link {
 		font-size: 18px;
@@ -414,14 +414,14 @@ p {
 .video-container {
   	position: relative;
   	overflow: hidden;
-  	
+
 }
 .live{
 	background-image: url('../img/live-comedy-bg.jpg') ;
 	background-repeat: no-repeat;
 	/*background: url('../img/live-comedy-bg.jpg')  no-repeat !important;*/
     background-size:     cover;
-    background-position:  center;  
+    background-position:  center;
     height: 100%;
 
 }
@@ -429,7 +429,7 @@ p {
 	background-image: url('../img/digital-comedy-bg.jpg') ;
 	background-repeat: no-repeat;
     background-size:     cover;
-    background-position:  center;  
+    background-position:  center;
     height: 100%;
 
 }
@@ -700,7 +700,7 @@ p {
 	}
 	.title span{
 		font-size:4.5vw;
-		margin-bottom:10px; 
+		margin-bottom:10px;
 
 	}
 	.team-dropdown-content{
@@ -775,7 +775,7 @@ p {
 		padding-left: 15px;
 		padding-right: 15px;
 	}
-	
+
 	.mobile-nav{
 		animation-name: pop_in_bottom;
 		opacity: 0;
@@ -1009,7 +1009,7 @@ p {
 	font-size: 6vw;
 	text-align: center;
 	margin: auto;
-	width: 100%;	
+	width: 100%;
 	z-index: -1;
 }
 
@@ -1064,7 +1064,7 @@ p {
 		margin-top: 30px;
 	}
 
-	
+
 }
 
 
@@ -1115,7 +1115,7 @@ p {
 	}
 }*/
 .tempimg{
-	filter: blur(3px); 
+	filter: blur(3px);
 }
 
 .tempimg.is-loaded {
@@ -1184,6 +1184,23 @@ p {
 #comedy a{
 	color: #6c757d;
 
+}
+.bg-modal-color{
+	background-color: #f2f8ff4d;
+}
+#mobile-menu-button {
+	background: none;
+	border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+	&:active, &:focus {
+		outline: none;
+	}
+	&:active {
+		transform: translateY(2px);
+	}
 }
 .bg-modal-color{
 	background: white url('../img/bg.jpg') no-repeat;
