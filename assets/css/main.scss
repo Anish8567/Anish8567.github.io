@@ -1208,3 +1208,17 @@ p {
 	background-position: right bottom;
 	overflow: auto;
 }
+
+.mobile-navbar .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+		background-color: white ;
+}
+.mobile-navbar .hamburger-inner::before{
+	background-color: white ;
+}
+.mobile-navbar .hamburger-inner::after{
+		background-color: white ;
+ }
+
+.mobile-navbar .hamburger:hover {
+     opacity: 1; 
+}

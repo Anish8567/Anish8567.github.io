@@ -303,3 +303,19 @@ function check_scroll_top(){
 	var checkScrollTop = $(window).scrollTop();
 	// console.log("checkScrollTop:" +checkScrollTop);
 }
+
+// hamburger animation
+
+$(document).ready(function(){
+	$('#close-modal').click(function() {
+		console.log("clicked");
+		$('.hamburger').removeClass("is-active");
+
+	});
+	$('#close-modal2').click(function() {
+		console.log("clicked");
+		$('.hamburger').removeClass("is-active");
+
+	});
+
+});
