@@ -1148,7 +1148,9 @@ p {
 	text-decoration: none;
 }
 
-
+.navbar-main-index a{
+	text-decoration: none;
+}
 .fixed-data{
 	position: fixed;
 	top: 300px;
@@ -1221,4 +1223,7 @@ p {
 
 .mobile-navbar .hamburger:hover {
      opacity: 1; 
+}
+.mobile-navbar .hamburger{
+    padding: 0;
 }
