@@ -577,7 +577,7 @@ p {
 	font-size: 12px;
 }
 .icon-size{
-	height: 20px;
+	height: 24px;
 }
 .icon-large{
 	font-size: 20px;
@@ -588,9 +588,9 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
-	.overlay-desc{
+	/*.overlay-desc{
 		display: none;
-	}
+	}*/
 	.nav-inner-container{
 		position: static;
 		padding-bottom: 0;
@@ -754,7 +754,7 @@ p {
 	}
 	.social-links-container{
 		top: -140px;
-   		right: 0px;
+   		right: -10px;
 	}
 
 	#masthead h1{
@@ -1216,12 +1216,16 @@ p {
 
 .mobile-navbar .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
 		background-color: white ;
+		width: 28px;
 }
 .mobile-navbar .hamburger-inner::before{
 	background-color: white ;
+	width: 28px;
 }
 .mobile-navbar .hamburger-inner::after{
 		background-color: white ;
+		width: 28px;
+
  }
 
 .mobile-navbar .hamburger:hover {
@@ -1229,4 +1233,21 @@ p {
 }
 .mobile-navbar .hamburger{
     padding: 0;
+}
+#navigationModal{
+
+	h4{
+		font-size: 1.3rem;
+	}
+	h5{
+		font-size: 1.2rem;
+	}
+}
+.social-icons-size{
+	width: 27px;
+	height: 27px;
+}
+#close-modal{
+	line-height: 0;
+	font-size: 2rem;
 }
