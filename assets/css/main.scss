@@ -588,6 +588,9 @@ p {
 }
 
 @media only screen and (max-width: 600px) {
+	.overlay-desc{
+		display: none;
+	}
 	.nav-inner-container{
 		position: static;
 		padding-bottom: 0;
